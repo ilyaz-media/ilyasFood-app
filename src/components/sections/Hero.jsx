@@ -4,7 +4,7 @@ import minuman from '../../assets/minuman.png'
 
 export default function Hero() {
   return (
-    <section className="p-2 lg:p-10 w-[97%] rounded-lg min-h-[80vh] bg-gradient-to-br from-emerald-100 to-white m-2 lg:m-5 grid grid-cols-1 lg:grid-cols-2  ">
+    <section className="p-2 lg:p-10 w-[97%] rounded-lg  bg-gradient-to-br from-emerald-100 to-white m-2 lg:m-5 grid grid-cols-1 lg:grid-cols-2  ">
       <div className="p-5 flex flex-col gap-3 lg:gap-5 justify-center ">
         <h1 className=" text-3xl lg:text-5xl font-semibold leading-tight text-emerald-900">
           Rasa Lezat,
