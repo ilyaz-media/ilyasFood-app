@@ -45,7 +45,7 @@ export default function SideBar({openBar,setOpenBar}) {
         <div className="text-2xl font-bold">
           Ilyas <span className="text-emerald-500">Food</span>
         </div>
-        <div className="flex flex-col gap-5 lg:gap-10 text-sm  p-2">
+        <div className="flex flex-col gap-10 text-sm  p-2">
           {menu.map((item) => {
             const Icon = item.icon;
             return (
