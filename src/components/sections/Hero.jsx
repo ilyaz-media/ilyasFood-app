@@ -48,7 +48,7 @@ const states =[
             return <div className=" flex gap-2  ">
                 <Icon size={40} className="text-emerald-600"/>
                 <div className="flex flex-col ">
-                  <span className="text-3xl font-semibold ">{item.value}</span>
+                  <span className=" text-2xl lg:text-3xl font-semibold ">{item.value}</span>
                   <span className="text-xs ">{item.ket}</span>
                 </div>
             </div>
