@@ -1,7 +1,8 @@
 import { FaTimes } from "react-icons/fa";
 import { FaBars, FaCartShopping } from "react-icons/fa6";
+import { Link } from "react-router";
 
-export default function Navbar({ openBar, setOpenBar }) {
+export default function Navbar({ openBar, setOpenBar,openCart,setOpenCart }) {
   return (
     <nav className="flex px-10 py-5 justify-between md:hidden fixed w-full bg-white items-center z-[10]">
       <div className="flex gap-3">
@@ -10,7 +11,7 @@ export default function Navbar({ openBar, setOpenBar }) {
         <h1 className="font-bold text-xl">Ilyas <span className="text-emerald-500">Food</span></h1>
       </div>
       </div>
-      <button><FaCartShopping/></button>
+    <Link to={'/cart'}><FaCartShopping/></Link>
     </nav>
   );
 }

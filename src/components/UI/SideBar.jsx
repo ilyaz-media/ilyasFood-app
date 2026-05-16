@@ -40,19 +40,19 @@ export default function SideBar({openBar,setOpenBar}) {
   ];
 
   return (
-    <aside className={`fixed transition-all duration-300 ${openBar ? 'left-0':'-left-[100%]'} lg:left-0  lg:flex w-[200px] z-[20] bg-white h-screen p-8 flex flex-col justify-between`}>
-      <div className="flex flex-col gap-5">
+    <aside className={`fixed transition-all duration-300    ${openBar ? 'left-0':'-left-[100%]'} lg:left-0  lg:flex w-[200px] z-[20]  h-screen p-8 flex flex-col  bg-slate-50 justify-between`}>
+      <div className="flex flex-col gap-10">
         <div className="text-2xl font-bold">
           Ilyas <span className="text-emerald-500">Food</span>
         </div>
-        <div className="flex flex-col gap-10 text-sm  p-2">
+        <div className="flex flex-col gap-10 text-sm  mt-5 ">
           {menu.map((item) => {
             const Icon = item.icon;
             return (
               <Link
                 to={item.path}
-                className="flex font-semibol gap-5 items-center">
-                <Icon size={30} /> {item.nama}
+                className="flex font-semibol gap-5  items-center">
+                <Icon size={20} /> {item.nama}
               </Link>
             );
           })}

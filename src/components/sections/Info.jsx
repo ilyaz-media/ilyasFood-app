@@ -2,7 +2,7 @@ import { FaClock, FaLocationArrow, FaLocationCrosshairs, FaLocationDot, FaRegClo
 
 export default function Info() {
   return (
-    <div className=" m-3 lg:m-10  ">
+    <div className="p-2 lg:p-10  ">
         <div className="grid lg:grid-cols-2 gap-5">
       <div className="p-10 rounded-lg bg-white rounded-lg shadow-lg">
         <h2 className="font-semibold flex gap-5">

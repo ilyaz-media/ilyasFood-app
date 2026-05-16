@@ -1,33 +1,10 @@
 import { ChefHat, Headset, Leaf, ShieldCheck } from "lucide-react";
-import imgMenu1 from "../../assets/1.png";
+import menu from "../../data/menu";
+import { Link, useNavigate } from "react-router";
+import formatRupiah from "../../functionHelper/formatRupiah";
 
 export default function Menu() {
-  const menu = [
-    {
-      nama: "Ayam penyet",
-      harga: 20000,
-      gambar: imgMenu1,
-      ket: "Ayam goreng cryspi dengan sambal pedas khas.",
-    },
-    {
-      nama: "Ayam penyet",
-      harga: 20000,
-      gambar: imgMenu1,
-      ket: "Ayam goreng cryspi dengan sambal pedas khas.",
-    },
-    {
-      nama: "Ayam penyet",
-      harga: 20000,
-      gambar: imgMenu1,
-      ket: "Ayam goreng cryspi dengan sambal pedas khas.",
-    },
-    {
-      nama: "Ayam penyet",
-      harga: 20000,
-      gambar: imgMenu1,
-      ket: "Ayam goreng cryspi dengan sambal pedas khas.",
-    },
-  ];
+  const navigate = useNavigate();
 
   const statistik = [
     {
@@ -53,7 +30,7 @@ export default function Menu() {
   ];
 
   return (
-    <section className="rounded-lg min-h-screen p-5 lg:p-10  m-3 lg:m-5">
+    <section className="rounded-lg min-h-screen px-2 py-5 lg:px-5 lg:py-10 bg-white  mt-10 ">
       <div className=" flex justify-between items-center">
         <h1 className=" text-xl lg:text-2xl font-bold">Menu Favorit</h1>
         <a href="" className="lg:text-xl text-xs text-emerald-600">
@@ -75,9 +52,11 @@ export default function Menu() {
                 <p className="text-sm">{item.ket}</p>
                 <div className="flex justify-between items-center">
                   <h2 className="font-bold text-emerald-600 text-xl">
-                    Rp.{item.harga}
+                    {formatRupiah(item.harga)}
                   </h2>
-                  <button className="font-bold text-2xl text-emerald-600 bg-slate-200 px-5 py-1 rounded-lg">
+                  <button
+                    onClick={() => navigate(`/menu/${item.id}`)}
+                    className="font-bold text-2xl text-emerald-600 bg-slate-200 px-5 py-1 rounded-lg">
                     +
                   </button>
                 </div>
